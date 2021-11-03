@@ -17,6 +17,11 @@ expense_questions = [
         "name": "spender",
         "message": "New Expense - Spender: ",
     },
+    {
+        "type": "input",
+        "name": "people",
+        "message": "New Expense - People involved: ",
+    },
 
 ]
 
@@ -32,7 +37,7 @@ def new_expense(*args):
         for e in infos:
             expense.append(infos[e])
 
-        spamwriter.writerow([expense[0], expense[1], expense[2]])
+        spamwriter.writerow([expense[0], expense[1], expense[2], expense[3]])
 
     print("Expense Added !")
     return True
