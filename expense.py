@@ -37,6 +37,22 @@ def new_expense(*args):
         for e in infos:
             expense.append(infos[e])
 
+        if not (expense[0].isnumeric()):
+            print("Amount can't be letters, please try again")
+            return False
+
+        if not (expense[1].isalpha()):
+            print("Label can't be numbers, please try again")
+            return False
+
+        if not (expense[2].isalpha()):
+            print("Spender can't be numbers, please try again")
+            return False
+
+        if not (expense[3].isalpha()):
+            print("People can't be numbers, please try again")
+            return False
+
         spamwriter.writerow([expense[0], expense[1], expense[2], expense[3]])
 
     print("Expense Added !")
