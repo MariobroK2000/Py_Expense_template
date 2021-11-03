@@ -11,6 +11,7 @@ def ask_option():
         "message": "Expense Tracker v0.1",
         "choices": ["New Expense", "Show Status", "New User"]
     }
+
     option = prompt(main_option)
     if (option['main_options']) == "New Expense":
         new_expense()
